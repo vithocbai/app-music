@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Common */
+.btn-icon {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.btn-random.active,
+.btn-repeat.active {
+    color: red !important;
+}
+
+animate {
+    animation: spinner 6s infinite linear;
+}
+
+.interface-music {
+    position: relative;
+    height: 650px;
+    width: 400px;
+    background-color: #deb1b1;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.dashboard {
+    position: fixed;
+    width: inherit;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #deb1b1;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* header */
+.header-music {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrowLeft-icon i {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.wrap-title {
+    display: flex;
+    align-items: center;
+}
+
+.title-music {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+}
+
+.music-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+/* ImageCD */
+.imageCD {
+    display: flex;
+    margin: auto;
+    width: 200px;
+}
+
+.imageCD-avatar {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+
+.heading-music {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: white;
+    margin-top: 16px;
+}
+
+.nameMusic .desc {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.btn-toggle-play {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50px;
+    height: 50px;
+    background-color: #e91e63;
+    font-size: 2.9rem;
+    border-radius: 50%;
+}
+
+.btn-toggle-play .fa-regular {
+    display: none;
+}
+
+/* Kiểu dáng chung của thanh trượt */
+input[type="range"] {
+    -webkit-appearance: none; /* Xóa kiểu mặc định trên các trình duyệt Webkit */
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, yellow, red);
+    border-radius: 5px;
+    outline: none;
+    margin: 16px 0;
+}
+
+/* Kiểu dáng của nút trượt (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #ff0000, #b30000);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.fa-regular.active {
+    display: block !important;
+}
+
+/* Playlist */
+.playlist {
+    height: inherit;
+    overflow-y: scroll;
+    padding: 430px 16px 10px;
+    cursor: pointer;
+}
+
+.playlist::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+}
+
+.playlist::-webkit-scrollbar {
+    width: 4px;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #286bf0;
+    border: 1px solid #000;
+}
+
+.playlist .song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #ffffff70;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.playlist .thumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.playlist .title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+}
+
+.playlist .desc {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.playlist .option {
+    color: white;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.playlist .song.active {
+    background-color: #3e598d;
+}
+
+@keyframes spinner {
+    from {
+        rotate: 0;
+    }
+    to {
+        rotate: 360deg;
+    }
+}

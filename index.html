@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muisic Player</title>
+
+        <!-- Font-Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Reset css -->
+        <link rel="stylesheet" href="./assest/css/reset.css" />
+        <link rel="stylesheet" href="./assest/css/style.css" />
+    </head>
+    <body>
+        <div class="interface-music">
+            <div class="dashboard">
+                <!-- Header -->
+                <header class="header-music">
+                    <div class="arrowLeft-icon">
+                        <i class="fa-solid fa-less-than"></i>
+                    </div>
+                    <h2 class="wrap-title">
+                        <img
+                            class="music-icon"
+                            src="./assest/icon/icon-music.png"
+                            alt=""
+                        />
+                        <div class="title-music">Now Playing</div>
+                    </h2>
+                    <div class="dost">
+                        <img src="./assest/icon/dots.png" alt="" />
+                    </div>
+                </header>
+                <!-- Image -->
+                <div class="imageCD">
+                    <div
+                        class="imageCD-avatar animate"
+                        style="background-image: url('assest/img/avatar-1.jpg')"
+                    ></div>
+                </div>
+                <!-- Desccontent -->
+                <div class="nameMusic">
+                    <h1 class="heading-music">Sould and Mind</h1>
+                    <p class="desc">CHKO HIBSON</p>
+                </div>
+                <!-- Controls -->
+                <div class="controls">
+                    <div class="btn-icon btn-repeat">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div onclick="functin" class="btn-icon btn-prev">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="btn-icon btn-toggle-play ">
+                        <i class="fa-regular fa-circle-play active"></i>
+                        <i class="fa-regular fa-circle-stop"></i>
+                    </div>
+                    <div class="btn-icon btn-next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="btn-icon btn-random">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+                <input step="1" min="0" max="100" type="range" value="0" class="intput-range" id="progress"/>
+                <audio
+                    id="audio"
+                    src=""
+                >
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Playlist -->
+            <div class="playlist"></div>
+        </div>
+        <script src="./assest/main.js"></script>
+    </body>
+</html>
